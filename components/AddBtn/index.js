@@ -1,14 +1,15 @@
 import React,{useState} from "react";
 import { TransactionModal } from "../TransactionModal";
+import styles from './AddBtn.module.css'
 
 export const AddBtn = () => {
     const [open,setOpen]=useState(false)
     const toggle=()=>setOpen(!open)
 
     return(
-        <div className="flex flex-col justify-center">
+        <div className={styles.contain}>
             <button
-                className=" bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mx-1 ease-linear transition-all duration-150"
+                className={styles.addbtn}
                 type="button"
                 onClick={() => setOpen(true)}
             >

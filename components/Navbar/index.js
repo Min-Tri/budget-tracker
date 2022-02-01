@@ -68,17 +68,17 @@ const Navbar = () => {
                 Budget
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/chart'>
               <a className={styles.navItem}>
                 Chart
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/plan'>
               <a className={styles.navItem}>
                 Plan
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/profile'>
               <a className={styles.navItem}>
                 Profile
               </a>

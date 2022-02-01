@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Transaction } from '../Transaction';
-
+import styles from './TransactionList.module.css'
 import { GlobalContext } from '../../context/GlobalState';
 
 export const TransactionList = () => {
@@ -8,8 +8,8 @@ export const TransactionList = () => {
 
   return (
     <>
-      <h3 className='border-b-2 w-full pb-2 text-lg font-medium'>History</h3>
-      <ul className="mb-2 p-0 list-none">
+      <h3 className={styles.title}>History</h3>
+      <ul className={styles.list}>
         {transactions.map(transaction => (
             <Transaction key={transaction.id} transaction={transaction} />
         ))}

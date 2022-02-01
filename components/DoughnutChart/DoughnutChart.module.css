@@ -1,0 +1,21 @@
+.containl{
+    @apply flex flex-col flex-1 text-center mr-1
+}
+.containr{
+    @apply flex flex-col flex-1 text-center ml-1
+}
+.title{
+    @apply mr-auto uppercase text-lg font-bold
+}
+.income{
+    @apply mr-auto uppercase text-lg font-medium text-lime-600
+}
+.expense{
+    @apply mr-auto uppercase text-lg font-medium text-rose-600
+}
+.cover{
+    @apply relative w-[90%]
+}
+.canvas{
+    @apply relative inset-x-[5%]
+}

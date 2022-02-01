@@ -1,0 +1,24 @@
+.income{
+    @apply flex my-2 bg-white shadow-lg justify-between border-r-4 p-2 border-lime-600   
+}
+.expense{
+    @apply flex my-2 bg-white shadow-lg justify-between border-r-4 p-2 border-rose-600
+}
+.content{
+    @apply text-left w-2/4
+}
+.title{
+    @apply text-xl font-medium truncate overflow-hidden
+}
+.subtitle{
+    @apply text-sm font-light
+}
+.amount{
+    @apply flex flex-col justify-center text-xl
+}
+.deletebtn{
+    @apply cursor-pointer bg-rose-400 rounded-full leading-relaxed p-0.5 text-lg ml-2
+}
+.icon{
+    @apply fill-current h-5 w-5 text-white
+}

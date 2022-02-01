@@ -1,0 +1,15 @@
+.contain{
+    @apply shadow-lg p-4 flex justify-between my-7 w-full
+}
+.content{
+    @apply flex-1 text-center border-solid
+}
+.title{
+    @apply uppercase text-lg font-medium
+}
+.income{
+    @apply text-lg tracking-wide my-1 text-lime-600
+}
+.expense{
+    @apply text-lg tracking-wide my-1 text-rose-600
+}

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { AddBtn } from '../components/AddBtn'
 import { Balance } from '../components/Balance'
-import { IncomeExpenses } from '../components/IncomeExpenses'
+import { IncomeExpenses } from '../components/InAndOut'
 import Navbar from '../components/Navbar'
 import { TransactionList } from '../components/TransactionList'
 

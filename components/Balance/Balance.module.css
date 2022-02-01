@@ -1,0 +1,9 @@
+.contain{
+    @apply my-3 mr-auto
+}
+.title{
+    @apply uppercase text-lg font-medium
+}
+.total{
+    @apply tracking-wide text-2xl font-semibold
+}

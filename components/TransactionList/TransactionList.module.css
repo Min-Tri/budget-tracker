@@ -1,0 +1,6 @@
+.title{
+    @apply border-b-2 w-full pb-2 text-lg font-medium uppercase
+}
+.list{
+    @apply mb-2 p-0 list-none
+}
