@@ -15,16 +15,16 @@ export default function Home() {
       </Head>
 
       <header>
-        <Navbar/>
+        <Navbar />
       </header>
 
       <main className="flex flex-col w-full flex-1 px-8 text-center">
         <div className='flex '>
-          <Balance/>
-          <AddBtn/>
+          <Balance />
+          <AddBtn />
         </div>
-        <IncomeExpenses/>
-        <TransactionList/>
+        <IncomeExpenses />
+        <TransactionList />
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
@@ -35,7 +35,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />          
+          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </a>
       </footer>
     </div>

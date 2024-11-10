@@ -1,13 +1,12 @@
-import react from "react";
 import Navbar from "../components/Navbar";
 
 export default function Profile() {
     return (
         <div>
             <header>
-                <Navbar/>
+                <Navbar />
             </header>
-            <main>profile</main>   
+            <main>profile</main>
         </div>
     )
 }
