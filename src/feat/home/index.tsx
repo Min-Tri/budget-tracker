@@ -13,42 +13,24 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ChartData, Expense, NewExpense, SortBy } from "@/types"
 import { Car, Home, Plus, ShoppingBag, Utensils, Wallet } from "lucide-react"
 import React, { useMemo, useState } from "react"
 import { Bar, Cell, Pie, BarChart as RechartsBarChart, PieChart as RechartsPieChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8']
 
-interface Expense {
-  id: number
-  category: string
-  amount: number
-  icon: React.ReactNode
-  date: string
-}
-
-interface NewExpense {
-  category: string
-  amount: string
-  date: string
-}
-
-interface ChartData {
-  name: string
-  value: number
-}
-
-type SortBy = "day" | "month" | "year"
+const mockData=[
+  { id: 1, category: "Rent", amount: 1700, icon: <Home className="w-4 h-4" />, date: "2024-12-01" },
+  { id: 2, category: "Food", amount: 500, icon: <Utensils className="w-4 h-4" />, date: "2024-12-15" },
+  { id: 3, category: "Shopping", amount: 300, icon: <ShoppingBag className="w-4 h-4" />, date: "2024-12-20" },
+  { id: 4, category: "Transport", amount: 200, icon: <Car className="w-4 h-4" />, date: "2024-12-25" },
+]
 
 export default function HomeContainer() {
   const [isDark, setIsDark] = useState<boolean>(false)
-  const [balance, setBalance] = useState<number>(32500.00)
-  const [expenses, setExpenses] = useState<Expense[]>([
-    { id: 1, category: "Rent", amount: 1700, icon: <Home className="w-4 h-4" />, date: "2024--01" },
-    { id: 2, category: "Food", amount: 500, icon: <Utensils className="w-4 h-4" />, date: "2024--15" },
-    { id: 3, category: "Shopping", amount: 300, icon: <ShoppingBag className="w-4 h-4" />, date: "2024--20" },
-    { id: 4, category: "Transport", amount: 200, icon: <Car className="w-4 h-4" />, date: "2024--25" },
-  ])
+  const [balance] = useState<number>(32500.00)
+  const [expenses, setExpenses] = useState<Expense[]>(mockData)
   const [sortBy, setSortBy] = useState<SortBy>("day")
   const [newExpense, setNewExpense] = useState<NewExpense>({ category: "", amount: "", date: "" })
 
@@ -137,7 +119,7 @@ export default function HomeContainer() {
 
           {/* Main Content Tabs */}
           <Tabs defaultValue="overview" className="w-full">
-            <TabsList className="grid grid-cols-3 mb-4">
+            <TabsList className="w-full gap-2 mb-4">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="expenses">Expenses</TabsTrigger>
               <TabsTrigger value="analytics">Analytics</TabsTrigger>
