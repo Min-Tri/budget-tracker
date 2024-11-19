@@ -17,6 +17,8 @@ import { ChartData, Expense, NewExpense, SortBy } from "@/types"
 import { Car, Home, Plus, ShoppingBag, Utensils, Wallet } from "lucide-react"
 import React, { useMemo, useState } from "react"
 import { Bar, Cell, Pie, BarChart as RechartsBarChart, PieChart as RechartsPieChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { BalanceCard } from "./components/balance-card"
+import { MonthReport } from "./components/month-report"
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8']
 
@@ -29,7 +31,6 @@ const mockData=[
 
 export default function HomeContainer() {
   const [isDark, setIsDark] = useState<boolean>(false)
-  const [balance] = useState<number>(32500.00)
   const [expenses, setExpenses] = useState<Expense[]>(mockData)
   const [sortBy, setSortBy] = useState<SortBy>("day")
   const [newExpense, setNewExpense] = useState<NewExpense>({ category: "", amount: "", date: "" })
@@ -104,8 +105,8 @@ export default function HomeContainer() {
           {/* Balance Card */}
           <Card className="bg-gradient-to-r from-violet-500 to-purple-500 text-white">
             <CardContent className="pt-6">
-              <div className="text-sm opacity-80">Total Balance</div>
-              <div className="text-3xl font-bold">${balance.toLocaleString()}</div>
+              <div className="text-sm opacity-80 text-primary">Total Balance</div>
+              <div className="text-3xl font-bold text-primary">$32500.00</div>
               <div className="mt-4 flex gap-2">
                 <Button size="sm" variant="secondary" className="bg-white/20 hover:bg-white/30">
                   <Plus className="w-4 h-4 mr-2" /> Add Income
@@ -116,6 +117,9 @@ export default function HomeContainer() {
               </div>
             </CardContent>
           </Card>
+
+          <BalanceCard balance={22}/>
+          <MonthReport />
 
           {/* Main Content Tabs */}
           <Tabs defaultValue="overview" className="w-full">
