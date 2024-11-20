@@ -21,7 +21,7 @@ interface MonthReportProps {
     }[];
     thisWeek: {
       name: string;
-      amount: number;  
+      amount: number;
     }[];
     nextWeek: {
       name: string;
@@ -51,10 +51,13 @@ export const MonthReport = ({
     <Card>
       <CardContent className="pt-6">
         <Tabs defaultValue={type}>
-          <TabsList>
-            <TabsTrigger value="week">Per Week</TabsTrigger>
-            <TabsTrigger value="month">Per Month</TabsTrigger>
-          </TabsList>
+          <div className="flex items-center justify-between">
+            <p>Month Report</p>
+            <TabsList>
+              <TabsTrigger value="week">Per Week</TabsTrigger>
+              <TabsTrigger value="month">Per Month</TabsTrigger>
+            </TabsList>
+          </div>
           <TabsContent value="week">
             <ResponsiveContainer width="100%" height={300}>
               <LineChart>
@@ -63,26 +66,26 @@ export const MonthReport = ({
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line 
+                <Line
                   data={data?.lastWeek}
-                  type="monotone" 
-                  dataKey="amount" 
-                  name="Last Week"
-                  stroke="#8884d8" 
-                />
-                <Line 
-                  data={data?.thisWeek}
-                  type="monotone" 
+                  type="monotone"
                   dataKey="amount"
-                  name="This Week" 
+                  name="Last Week"
+                  stroke="#8884d8"
+                />
+                <Line
+                  data={data?.thisWeek}
+                  type="monotone"
+                  dataKey="amount"
+                  name="This Week"
                   stroke="#82ca9d"
                 />
-                <Line 
+                <Line
                   data={data?.nextWeek}
-                  type="monotone" 
+                  type="monotone"
                   dataKey="amount"
                   name="Next Week"
-                  stroke="#ffc658" 
+                  stroke="#ffc658"
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -95,26 +98,26 @@ export const MonthReport = ({
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line 
+                <Line
                   data={data?.lastMonth}
-                  type="monotone" 
+                  type="monotone"
                   dataKey="amount"
                   name="Last Month"
-                  stroke="#8884d8" 
+                  stroke="#8884d8"
                 />
-                <Line 
+                <Line
                   data={data?.thisMonth}
-                  type="monotone" 
+                  type="monotone"
                   dataKey="amount"
                   name="This Month"
                   stroke="#82ca9d"
                 />
-                <Line 
+                <Line
                   data={data?.nextMonth}
-                  type="monotone" 
+                  type="monotone"
                   dataKey="amount"
                   name="Next Month"
-                  stroke="#ffc658" 
+                  stroke="#ffc658"
                 />
               </LineChart>
             </ResponsiveContainer>

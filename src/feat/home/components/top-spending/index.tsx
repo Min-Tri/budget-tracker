@@ -11,7 +11,7 @@ interface TopSpendingProps {
     }[];
     month: {
       name: string;
-      value: number; 
+      value: number;
     }[];
   };
   type?: 'week' | 'month';
@@ -25,11 +25,14 @@ export const TopSpending = ({
     <Card>
       <CardContent className="pt-6">
         <Tabs defaultValue={type}>
-          <TabsList>
-            <TabsTrigger value="week">Per Week</TabsTrigger>
-            <TabsTrigger value="month">Per Month</TabsTrigger>
-          </TabsList>
-          
+          <div className="flex items-center justify-between">
+            <p>Top Spending</p>
+            <TabsList>
+              <TabsTrigger value="week">Per Week</TabsTrigger>
+              <TabsTrigger value="month">Per Month</TabsTrigger>
+            </TabsList>
+          </div>
+
           <TabsContent value="week">
             <div className="grid gap-4">
               {data?.week?.map((item, index) => (
