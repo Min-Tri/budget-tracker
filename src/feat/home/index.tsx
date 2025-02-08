@@ -88,7 +88,7 @@ export default function HomeContainer() {
           </Button>
         </div>
 
-        <div className="grid gap-4">
+        <div className="grid gap-4" style={{paddingBottom:64}}>
           {/* Balance Card */}
           {/* <Card className="bg-gradient-to-r from-violet-500 to-purple-500 text-white">
             <CardContent className="pt-6">
@@ -251,7 +251,6 @@ export default function HomeContainer() {
             </TabsContent>
           </Tabs> */}
         </div>
-        <div className="h-14 mt-2" />
       </div>
     </div>
   )
