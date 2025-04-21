@@ -17,4 +17,4 @@ export interface ChartData {
   value: number
 }
 
-export type SortBy = "day" | "month" | "year"
+export type SortBy = 'day' | 'month' | 'year'

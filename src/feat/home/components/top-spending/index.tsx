@@ -1,26 +1,23 @@
 'use client'
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 interface TopSpendingProps {
   data?: {
     week: {
-      name: string;
-      value: number;
-    }[];
+      name: string
+      value: number
+    }[]
     month: {
-      name: string;
-      value: number;
-    }[];
-  };
-  type?: 'week' | 'month';
+      name: string
+      value: number
+    }[]
+  }
+  type?: 'week' | 'month'
 }
 
-export const TopSpending = ({
-  data,
-  type = 'month'
-}: TopSpendingProps) => {
+export const TopSpending = ({ data, type = 'month' }: TopSpendingProps) => {
   return (
     <Card>
       <CardContent className="pt-6">
@@ -59,4 +56,3 @@ export const TopSpending = ({
     </Card>
   )
 }
-

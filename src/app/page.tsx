@@ -1,7 +1,5 @@
-
-import dynamic from "next/dynamic";
-const HomeContainer = dynamic(() => import("@/feat/home"), { ssr: true });
-
+import dynamic from 'next/dynamic'
+const HomeContainer = dynamic(() => import('@/feat/home'), { ssr: true })
 
 export default function Home() {
   return (
@@ -10,5 +8,5 @@ export default function Home() {
         <HomeContainer />
       </div>
     </main>
-  );
+  )
 }

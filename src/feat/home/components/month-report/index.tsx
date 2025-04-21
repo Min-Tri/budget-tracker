@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Card, CardContent } from '@/components/ui/card'
 import {
   LineChart,
   Line,
@@ -10,43 +10,40 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from 'recharts'
 
 interface MonthReportProps {
   data?: {
     lastWeek: {
-      name: string;
-      amount: number;
-    }[];
+      name: string
+      amount: number
+    }[]
     thisWeek: {
-      name: string;
-      amount: number;
-    }[];
+      name: string
+      amount: number
+    }[]
     nextWeek: {
-      name: string;
-      amount: number;
-    }[];
+      name: string
+      amount: number
+    }[]
     lastMonth: {
-      name: string;
-      amount: number;
-    }[];
+      name: string
+      amount: number
+    }[]
     thisMonth: {
-      name: string;
-      amount: number;
-    }[];
+      name: string
+      amount: number
+    }[]
     nextMonth: {
-      name: string;
-      amount: number;
-    }[];
-  };
-  type?: 'week' | 'month';
+      name: string
+      amount: number
+    }[]
+  }
+  type?: 'week' | 'month'
 }
 
-export const MonthReport = ({
-  data,
-  type = 'month'
-}: MonthReportProps) => {
+export const MonthReport = ({ data, type = 'month' }: MonthReportProps) => {
   return (
     <Card>
       <CardContent className="pt-6">
@@ -127,4 +124,3 @@ export const MonthReport = ({
     </Card>
   )
 }
-

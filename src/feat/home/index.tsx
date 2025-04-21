@@ -1,11 +1,11 @@
 'use client'
 
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
-import { BalanceCard } from "./components/balance-card"
-import { History } from "./components/history"
-import { MonthReport } from "./components/month-report"
-import { TopSpending } from "./components/top-spending"
+import { Button } from '@/components/ui/button'
+import { useState } from 'react'
+import { BalanceCard } from './components/balance-card'
+import { History } from './components/history'
+import { MonthReport } from './components/month-report'
+import { TopSpending } from './components/top-spending'
 
 // const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8']
 
@@ -79,16 +79,19 @@ export default function HomeContainer() {
   // }
 
   return (
-    <div className={`min-h-screen w-full ${isDark ? "dark" : ""}`}>
+    <div className={`min-h-screen w-full ${isDark ? 'dark' : ''}`}>
       <div className="container mx-auto p-4 max-w-md md:max-w-2xl lg:max-w-4xl">
-        <div className="flex w-full justify-between items-center" style={{ marginBottom: 24 }}>
+        <div
+          className="flex w-full justify-between items-center"
+          style={{ marginBottom: 24 }}
+        >
           <h1 className="text-2xl font-bold">Budget Tracker</h1>
           <Button variant="ghost" onClick={() => setIsDark(!isDark)}>
             Toggle Theme
           </Button>
         </div>
 
-        <div className="grid gap-4" style={{paddingBottom:64}}>
+        <div className="grid gap-4" style={{ paddingBottom: 64 }}>
           {/* Balance Card */}
           {/* <Card className="bg-gradient-to-r from-violet-500 to-purple-500 text-white">
             <CardContent className="pt-6">
